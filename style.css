@@ -1,0 +1,36 @@
+﻿html
+{
+    height: 95%;
+}
+body
+{
+    font-family: Calibri, Sans-Serif;
+    height: 100%;
+}
+table 
+{
+}
+td
+{
+    border: 0.1em solid gray;
+    text-align: center;
+    background-color: Silver;
+}
+.open
+{
+    background-color: White;
+}
+.zi
+{
+    font-size: 10.0em;
+}
+.py
+{
+    font-size: 5.0em;
+    color: Blue;
+}
+.en
+{
+    font-size: 5.0em;
+    color: Green;
+}
