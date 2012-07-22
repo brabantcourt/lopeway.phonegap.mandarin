@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="lopeway.phonegap.mandarin" version="1.0.0">
+	<name>Mandarin flashcards</name>
+	<description>Learn Mandarin characters with this easy-to-use flashcard app</description>
+	<author href="https://github.com/brabantcourt" email="daz.wilkin@brabantcourt.com">Daz Wilkin</author>
+	<icon src="brabantcourt.png" gap:role="default" />
+	<preference name="orientation" value="portrait" />
+</widget>
