@@ -1,36 +1,28 @@
-﻿html
-{
-    height: 95%;
+﻿html {
+    height: 100%;
 }
-body
-{
+body {
     font-family: Calibri, Sans-Serif;
     height: 100%;
 }
-table 
-{
+table {
 }
-td
-{
+td {
     border: 0.1em solid gray;
     text-align: center;
     background-color: Silver;
 }
-.open
-{
+.open {
     background-color: White;
 }
-.zi
-{
-    font-size: 10.0em;
-}
-.py
-{
+.zi {
     font-size: 5.0em;
+}
+.py {
+    font-size: 2.0em;
     color: Blue;
 }
-.en
-{
-    font-size: 5.0em;
+.en {
+    font-size: 2.0em;
     color: Green;
 }
