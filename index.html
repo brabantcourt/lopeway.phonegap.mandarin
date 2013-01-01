@@ -3,31 +3,46 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Mandarin Flashcards</title>
-	<link rel=Stylesheet href=style.css type="text/css" title="stylesheet" media=screen />
-	<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-	<script src="scripts/jquery-1.7.2.min.js" type="text/javascript"></script>
-	<script src="scripts/knockout-2.1.0.js" type="text/javascript"></script>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet">
+	<script src="scripts/jquery-1.8.3.min.js"></script>
+	<script src="scripts/knockout-2.2.0.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/raphael-min.js"></script>
 </head>
 <body>
-<table style="height: 100%; width: 100%;">
-<tbody data-bind="with: random()" style="height:100%;">
-    <tr data-bind="click: $root.click.traditional">
-        <td colspan="2" data-bind="text: traditional" class="zi"></td>
-    </tr>
-    <tr data-bind="click: $root.click.pinyin"">
-        <td data-bind="visible: !$root.isDisplayed.pinyin()" class="py">Pinyin</td>
-        <td data-bind="visible:  $root.isDisplayed.pinyin(), text: pinyin" class="open py" ></td>
-    </tr>
-    <tr data-bind="click: $root.click.english">
-        <td data-bind="visible: !$root.isDisplayed.english()" class="en" >English</td>
-        <td data-bind="visible:  $root.isDisplayed.english(), text: english" class="open en" ></td>
-    </tr>
-</tbody>
-</table>
-    
-<!-- Scripts -->
-<script src="scripts/entities.1.0.js" type="text/javascript"></script>
-<script src="scripts/mandarin.1.0.js" type="text/javascript"></script>
-
+<div id="toolbar" class="btn-toolbar">
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Lessons&nbsp;<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li>
+                &nbsp;
+				<input id="lessonall" data-bind="checked: allnone, click: $root.click.allnone" type="checkbox" />
+				<label class="checkbox inline">Lesson</label>
+				</li>
+            <li class="divider"></li>
+        <!-- ko foreach:lessons -->
+            <li>
+                &nbsp;
+                <input type="checkbox" name="lessons" data-bind="attr: { id: 'lesson'+$index, value: $index }, checked: checkbox" />
+                <label class="checkbox inline" data-bind="text: $index, attr: { for: 'lesson' + $index }"></label>
+            </li>
+        <!-- /ko -->
+        </ul>
+    </div>
+</div>
+<div>
+<!-- ko with: outputPhrase() -->
+    <hr/>
+	<div style="cursor: pointer" data-bind ="smartbox: { value: traditional, color: 'black' }, click: $root.click.next"></div>
+    <hr/>
+	<div style="cursor: pointer" data-bind="smartbox: { value: simplified, color: 'indigo' }, click: $root.click.next"></div>
+    <hr/>
+    <div style="cursor: pointer" data-bind="smartbox: { value: pinyin, color: 'blue' }, click: $root.click.pinyin"></div>
+	<hr/>
+    <div style="cursor: pointer" data-bind="smartbox: { value: english, color: 'green' }, click: $root.click.english"></div>
+<!-- /ko -->
+</div>
+<script src="scripts/entities.2.0.min.js" type="text/javascript"></script>
+<script src="scripts/mandarin.2.1.min.js" type="text/javascript"></script>
 </body>
 </html>
