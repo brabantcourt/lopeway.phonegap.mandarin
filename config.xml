@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.brabantcourt.mandarin" version="1.0.3">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.brabantcourt.mandarin" version="2.0.0">
 	<name>Mandarin flashcards</name>
 	<description>Helps students learning Mandarin Chinese by displaying traditional characters with the associated Pinyin and English.</description>
 	<author href="https://github.com/brabantcourt" email="daz.wilkin@brabantcourt.com">Daz Wilkin</author>
